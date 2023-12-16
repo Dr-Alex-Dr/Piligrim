@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/Piligrim/static/css/main.e42bb5e3.css",
-    "main.js": "/Piligrim/static/js/main.bc3bbb3f.js",
+    "main.css": "/Piligrim/static/css/main.93cd546f.chunk.css",
+    "main.js": "/Piligrim/static/js/main.aa29a554.chunk.js",
+    "main.js.map": "/Piligrim/static/js/main.aa29a554.chunk.js.map",
+    "runtime~main.js": "/Piligrim/static/js/runtime~main.bc0d4c62.js",
+    "runtime~main.js.map": "/Piligrim/static/js/runtime~main.bc0d4c62.js.map",
+    "static/css/2.764ccc25.chunk.css": "/Piligrim/static/css/2.764ccc25.chunk.css",
+    "static/js/2.54d28aac.chunk.js": "/Piligrim/static/js/2.54d28aac.chunk.js",
+    "static/js/2.54d28aac.chunk.js.map": "/Piligrim/static/js/2.54d28aac.chunk.js.map",
     "index.html": "/Piligrim/index.html",
-    "main.e42bb5e3.css.map": "/Piligrim/static/css/main.e42bb5e3.css.map",
-    "main.bc3bbb3f.js.map": "/Piligrim/static/js/main.bc3bbb3f.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.e42bb5e3.css",
-    "static/js/main.bc3bbb3f.js"
-  ]
+    "precache-manifest.6f46f71dcbedca7ad01558ef5471378b.js": "/Piligrim/precache-manifest.6f46f71dcbedca7ad01558ef5471378b.js",
+    "service-worker.js": "/Piligrim/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/Piligrim/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.93cd546f.chunk.css.map": "/Piligrim/static/css/main.93cd546f.chunk.css.map"
+  }
 }
