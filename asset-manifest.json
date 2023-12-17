@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Piligrim/static/css/main.dc13fbb1.chunk.css",
+    "main.css": "/Piligrim/static/css/main.7244f835.chunk.css",
     "main.js": "/Piligrim/static/js/main.1cbf67dd.chunk.js",
     "main.js.map": "/Piligrim/static/js/main.1cbf67dd.chunk.js.map",
     "runtime~main.js": "/Piligrim/static/js/runtime~main.bc0d4c62.js",
@@ -9,9 +9,9 @@
     "static/js/2.efe36ef6.chunk.js": "/Piligrim/static/js/2.efe36ef6.chunk.js",
     "static/js/2.efe36ef6.chunk.js.map": "/Piligrim/static/js/2.efe36ef6.chunk.js.map",
     "index.html": "/Piligrim/index.html",
-    "precache-manifest.9f61536b5bbe0cca8d5c293f3f0453f3.js": "/Piligrim/precache-manifest.9f61536b5bbe0cca8d5c293f3f0453f3.js",
+    "precache-manifest.4cad74b45b557589e0929e981c36b9c0.js": "/Piligrim/precache-manifest.4cad74b45b557589e0929e981c36b9c0.js",
     "service-worker.js": "/Piligrim/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/Piligrim/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.dc13fbb1.chunk.css.map": "/Piligrim/static/css/main.dc13fbb1.chunk.css.map"
+    "static/css/main.7244f835.chunk.css.map": "/Piligrim/static/css/main.7244f835.chunk.css.map"
   }
 }
