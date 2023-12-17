@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Piligrim/static/css/main.6ab1506f.chunk.css",
-    "main.js": "/Piligrim/static/js/main.e72151c3.chunk.js",
-    "main.js.map": "/Piligrim/static/js/main.e72151c3.chunk.js.map",
+    "main.css": "/Piligrim/static/css/main.a7d3abd8.chunk.css",
+    "main.js": "/Piligrim/static/js/main.1cbf67dd.chunk.js",
+    "main.js.map": "/Piligrim/static/js/main.1cbf67dd.chunk.js.map",
     "runtime~main.js": "/Piligrim/static/js/runtime~main.bc0d4c62.js",
     "runtime~main.js.map": "/Piligrim/static/js/runtime~main.bc0d4c62.js.map",
     "static/css/2.764ccc25.chunk.css": "/Piligrim/static/css/2.764ccc25.chunk.css",
     "static/js/2.efe36ef6.chunk.js": "/Piligrim/static/js/2.efe36ef6.chunk.js",
     "static/js/2.efe36ef6.chunk.js.map": "/Piligrim/static/js/2.efe36ef6.chunk.js.map",
     "index.html": "/Piligrim/index.html",
-    "precache-manifest.3790b4e6b7aa3496b79b1c43d365f6f1.js": "/Piligrim/precache-manifest.3790b4e6b7aa3496b79b1c43d365f6f1.js",
+    "precache-manifest.38a952232ec482a223da29f8445d8c7b.js": "/Piligrim/precache-manifest.38a952232ec482a223da29f8445d8c7b.js",
     "service-worker.js": "/Piligrim/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/Piligrim/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.6ab1506f.chunk.css.map": "/Piligrim/static/css/main.6ab1506f.chunk.css.map"
+    "static/css/main.a7d3abd8.chunk.css.map": "/Piligrim/static/css/main.a7d3abd8.chunk.css.map"
   }
 }
