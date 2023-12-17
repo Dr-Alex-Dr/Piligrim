@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Piligrim/precache-manifest.1fb72f7fb0b763c5db67df2ae06b04c6.js"
+  "/Piligrim/precache-manifest.f0d9e53ad4479f1d675866421ef5894e.js"
 );
 
 self.addEventListener('message', (event) => {
