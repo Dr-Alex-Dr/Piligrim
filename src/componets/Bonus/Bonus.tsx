@@ -1,22 +1,28 @@
 import React from "react";
-import './Bonus.css'
+import styles from './Bonus.module.css'
+
 
 interface BonusProps {
     img: string,
     name: string,
-    balance: string,
-    index: number
+    balance: string
 }
 
-export function Bonus({ img, name, balance, index }: BonusProps) {
+export function Bonus(props: BonusProps) {
+    const { 
+        img, 
+        name, 
+        balance 
+    } = props
+
     return (
-        <div className="Bonus"> 
-                <div className="BonusImg">
-                    <img src={img}/>
-                </div>              
-            <div className="BonusWrapper">         
-                <p className="BonusName">{name}</p>
-                <p className="BonusBalace">{balance} ₽</p>      
+        <div className={styles.Bonus}> 
+            <div className={styles.BonusImg}>
+                <img src={img}/>
+            </div>              
+            <div className={styles.BonusWrapper}>         
+                <p className={styles.BonusName}>{name}</p>
+                <p className={styles.BonusBalace}>{balance}₽</p>      
             </div>         
         </div>
     )

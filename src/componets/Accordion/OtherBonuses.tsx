@@ -36,7 +36,7 @@ const OtherBonuses = ({bonusList}: OtherBonusesProps) => {
       </div> 
       {
         visibility && bonusList.map((item, index) => ( 
-          <Bonus key={index} img={item.img} name={item.name} balance={item.balance} index={index}/>
+          <Bonus key={index} img={item.img} name={item.name} balance={item.balance}/>
         ))
       }
     </div>

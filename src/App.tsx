@@ -3,10 +3,10 @@ import './App.css';
 import { MainButton, useShowPopup } from '@vkruglikov/react-telegram-web-app';
 import { Bonus } from './componets/Bonus/Bonus';
 import OtherBonuses from './componets/Accordion/OtherBonuses'
-import { Commands } from './componets/Commands/Commands';
+import Commands from './componets/Commands/Commands';
 import { Menu } from './componets/Menu/Menu';
 import { addUser } from './api/addUser';
-import { Transactions } from './componets/Transactions/Transactions';
+import Transactions from './componets/Transactions/Transactions';
 import { getCoins } from './api/getCoins';
 
 // const [auth, setAuth] = useState<any>()
@@ -16,9 +16,6 @@ import { getCoins } from './api/getCoins';
 //     setAuth(res)
 //   })
 // }, [])
-
-
-
 
 
 function App() {
