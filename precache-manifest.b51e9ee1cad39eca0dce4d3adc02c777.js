@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f6bceb21fa4a481adb2fb18caeb575b",
+    "revision": "936756d54a230ebda8d75df42747728c",
     "url": "/Piligrim/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Piligrim/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "3ce64b1542f19ab3ff0f",
-    "url": "/Piligrim/static/css/main.0ce2d99a.chunk.css"
+    "revision": "61cee3eaa4af6837ac66",
+    "url": "/Piligrim/static/css/main.5baa2324.chunk.css"
   },
   {
     "revision": "d479f1e092ee27b0efe0",
     "url": "/Piligrim/static/js/2.9c6f8e72.chunk.js"
   },
   {
-    "revision": "3ce64b1542f19ab3ff0f",
-    "url": "/Piligrim/static/js/main.87472957.chunk.js"
+    "revision": "61cee3eaa4af6837ac66",
+    "url": "/Piligrim/static/js/main.ae81ff79.chunk.js"
   },
   {
     "revision": "892e5b603c65e0c18c57",
