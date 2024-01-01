@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+    font-family: Roboto;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+td {
+   text-align: center;
+   padding: 10px 0 10px 0;
+   font-size: '16px',
+}
+th {
+    padding: 10px 0 10px 0;
+    font-size: '16px',
+
+}
+tr {
+    border-bottom: 1px solid #00000035;
+}
+.TransactionsContainer {
+    margin-top: 15px;
+    background: var(--tg-theme-bg-color);
+}
+.TransactionsContainer p{
+    font-family: Roboto;
+    color: #6AB2F2;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-top: 10px;
+}

@@ -1,0 +1,63 @@
+.OtherBonusesImages {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.Image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+}
+
+.OtherBonusesImageFirt {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.OtherBonusesImageSecond {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.OtherBonusesWrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    background: var(--tg-theme-bg-color);
+}
+
+.css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
+    margin: 0;
+}
+
+.css-o4b71y-MuiAccordionSummary-content {
+    margin: 0 !important;
+    margin-top: 10px !important;
+}
+
+.css-15v22id-MuiAccordionDetails-root {
+    padding: 0 !important;
+}
+
+.OtherBonusesTitle {
+    font-family: Roboto;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.open {
+    display: none;
+}
+
+.arrow {
+    margin-left: 10px;
+    font-size: 18;
+}

@@ -1,0 +1,45 @@
+.Bonus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    background: var(--tg-theme-bg-color);
+    position: relative;
+}
+.BonusWrapper::after {
+    content: "";
+    position: absolute;
+    width: 104%;
+    height: 1px;
+    background-color: #202020;
+    bottom: -21px;
+    right: -20px;
+}
+
+.BonusWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+.BonusImg {
+
+}
+.BonusImg img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.BonusName {
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: Tahoma;
+}
+
+.BonusBalace {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Roboto;
+
+}

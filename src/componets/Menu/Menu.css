@@ -1,0 +1,36 @@
+.Menu {
+    background: var(--tg-theme-bg-color);
+    padding: 20px 20px 20px 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.MenuList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;  
+}
+.MenuListItem {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.MunuListItemLink {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    
+}
+.MenuListItem img{
+    width: 30px;
+}
+.MenuListItem p{
+    font-size: 11px;
+    color: #6AB2F2;
+}
