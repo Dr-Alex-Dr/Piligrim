@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Route, Routes, HashRouter } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Map from './pages/Map/Map';
-import { Coin } from './Interfaces';
+import { ICoin } from './Interfaces';
 import useTelegram from './hooks/useTelegram';
 import CreateUser from './api/CreateUser';
 import GetUserData from './api/GetUserData';
@@ -11,19 +11,20 @@ const App = () => {
   const {tg, user, ready} = useTelegram();
 
   const [isLogin, setIsLogin] = useState<boolean>(false)
-  const [coins, setCoins] = useState<Coin[]>()
+  const [coins, setCoins] = useState<ICoin[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const createUserResponse = await CreateUser(user?.id);
+        const createUserResponse = await CreateUser(968615914);
 
         if (createUserResponse.status === 200 || createUserResponse.status === 201) {
-          const getUserDataResponse = await GetUserData(user?.id);
+          const getUserDataResponse = await GetUserData(968615914);
           const userData = getUserDataResponse.data;
 
           setIsLogin(true);
-          setCoins(userData.data.coins);
+          let arr = userData.data.coins
+          setCoins([...arr]);
           ready()
         }
       } catch (error) {

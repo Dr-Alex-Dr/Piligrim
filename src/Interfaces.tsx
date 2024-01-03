@@ -1,4 +1,4 @@
-export interface Coin {
+export interface ICoin {
     address: string;
     balance_nano: number;
     balance_ok: boolean;
@@ -12,4 +12,11 @@ export interface Coin {
     price_oem_nano: number;
     symbol: string;
     updated_at: string;
+  }
+
+export interface IBonus {
+    id?: string,
+    image?: string,
+    name?: string,
+    balance_nano?: number
   }

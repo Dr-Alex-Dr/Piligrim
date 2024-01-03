@@ -1,28 +1,23 @@
 import React from "react";
 import styles from './Bonus.module.css'
+import { IBonus } from "../../Interfaces";
 
-
-interface BonusProps {
-    img: string,
-    name: string,
-    balance: string
-}
-
-const Bonus = (props: BonusProps) => {
+const Bonus = (props: IBonus) => {
     const { 
-        img, 
+        id,
+        image, 
         name, 
-        balance 
+        balance_nano 
     } = props
 
     return (
         <div className={styles.Bonus}> 
             <div className={styles.BonusImg}>
-                <img src={img}/>
+                <img src={image}/>
             </div>              
             <div className={styles.BonusWrapper}>         
                 <p className={styles.BonusName}>{name}</p>
-                <p className={styles.BonusBalace}>{balance}₽</p>      
+                <p className={styles.BonusBalace}>{balance_nano}₽</p>      
             </div>         
         </div>
     )
