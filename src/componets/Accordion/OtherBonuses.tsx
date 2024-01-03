@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Bonus } from '../Bonus/Bonus';
+import Bonus from '../Bonus/Bonus';
 import styles from './OtherBonuses.module.css'
 import classNames from 'classnames';
 import { HiMiniChevronDown } from "react-icons/hi2";
@@ -19,7 +19,7 @@ const OtherBonuses = ({bonusList}: OtherBonusesProps) => {
   const [visibility, setVisibility] = useState(false)
 
   return (
-    <div>
+    <div className={styles.container}>
       <div 
         className={classNames(styles.OtherBonusesWrapper, {[styles.open]: visibility})} 
         onClick={() => {setVisibility(true)}}>

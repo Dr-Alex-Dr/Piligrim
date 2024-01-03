@@ -14,6 +14,7 @@
   }
   
   .AppCommandsListItem {
+    cursor: pointer;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -21,7 +22,12 @@
     font-size: 15px;
   }
   
-  
   .AppCommandsListItem p{
     color: #6AB2F2;
+  }
+
+  .CommandText {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-family: Roboto;
   }

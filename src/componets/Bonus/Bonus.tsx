@@ -8,7 +8,7 @@ interface BonusProps {
     balance: string
 }
 
-export function Bonus(props: BonusProps) {
+const Bonus = (props: BonusProps) => {
     const { 
         img, 
         name, 
@@ -27,3 +27,5 @@ export function Bonus(props: BonusProps) {
         </div>
     )
 }
+
+export default Bonus

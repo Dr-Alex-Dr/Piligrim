@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './Menu.module.css'
+import {Link} from 'react-router-dom'
 
 
 export function Menu() {
@@ -7,16 +8,16 @@ export function Menu() {
     <div className={styles.Menu}>
         <ul className={styles.MenuList}>
             <li className={styles.MenuListItem}>
-                <a className={styles.MunuListItemLink} href="#">
+                <Link to={'/'} className={styles.MunuListItemLink}>
                     <img src="./assets/icons/credit-card.png"/>
                     <p>Моя карта</p>
-                </a>
+                </Link>
             </li>
             <li className={styles.MenuListItem}>
-                <a className={styles.MunuListItemLink} href="#">
+                <Link to={'/map'} className={styles.MunuListItemLink}>
                     <img src="./assets/icons/location.png"/>
                     <p>Карта партнеров</p>
-                </a>
+                </Link>
             </li>
             <li className={styles.MenuListItem}>
                 <a className={styles.MunuListItemLink} href="#">

@@ -24,7 +24,7 @@ const Commands = () => {
               <HiArrowUpCircle />
             </div>
           </IconContext.Provider>
-          <p>Отправить</p>
+          <p className={styles.CommandText}>Отправить</p>
         </li>
         <li className={styles.AppCommandsListItem} onClick={handleClick}>
           <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
@@ -32,7 +32,7 @@ const Commands = () => {
               <HiArrowDownCircle />
             </div>
           </IconContext.Provider>
-          <p>Получить</p>
+          <p className={styles.CommandText}>Получить</p>
         </li>
         <li className={styles.AppCommandsListItem} onClick={handleClick}>
           <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
@@ -40,7 +40,7 @@ const Commands = () => {
               <HiArrowUpCircle />
             </div>
           </IconContext.Provider>
-          <p>Обменять</p>
+          <p className={styles.CommandText}>Обменять</p>
         </li>
         <li className={styles.AppCommandsListItem} onClick={handleClick}>
           <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
@@ -48,7 +48,7 @@ const Commands = () => {
               <BsCreditCard2BackFill />
             </div>
           </IconContext.Provider>
-          <p>Списать</p>
+          <p className={styles.CommandText}>Списать</p>
         </li>
       </ul>
     </div>

@@ -1,5 +1,8 @@
+import React from 'react'
+import styles from './Map.module.css'
 
-export function map() {
+
+const Map = () => {
     return (
         <>
             <h1>Карта партнеров</h1>
@@ -7,3 +10,5 @@ export function map() {
         </>
     )
 }
+
+export default Map

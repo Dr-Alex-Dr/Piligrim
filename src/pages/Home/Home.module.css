@@ -1,0 +1,9 @@
+.container {
+    background-color: var(--tg-theme-secondary-bg-color);
+    padding-bottom: 110px;
+}
+
+.image  { 
+    min-width: 320px;
+    width: 100%; 
+}

@@ -101,12 +101,5 @@ code {
 }
 
 
-.AppImg {
-  min-width: 320px;
-  width: 100%;
-}
 
-.App {
-  background-color: var(--tg-theme-secondary-bg-color);
-}
 
