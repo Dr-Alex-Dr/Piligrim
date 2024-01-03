@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Piligrim/static/css/main.79b63b4d.css",
-    "main.js": "/Piligrim/static/js/main.c44f05e8.js",
+    "main.js": "/Piligrim/static/js/main.319f8d04.js",
     "index.html": "/Piligrim/index.html",
     "main.79b63b4d.css.map": "/Piligrim/static/css/main.79b63b4d.css.map",
-    "main.c44f05e8.js.map": "/Piligrim/static/js/main.c44f05e8.js.map"
+    "main.319f8d04.js.map": "/Piligrim/static/js/main.319f8d04.js.map"
   },
   "entrypoints": [
     "static/css/main.79b63b4d.css",
-    "static/js/main.c44f05e8.js"
+    "static/js/main.319f8d04.js"
   ]
 }
