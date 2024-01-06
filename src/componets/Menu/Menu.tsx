@@ -10,25 +10,25 @@ export function Menu() {
             <li className={styles.MenuListItem}>
                 <Link to={'/'} className={styles.MunuListItemLink}>
                     <img src="./assets/icons/credit-card.png"/>
-                    <p>Моя карта</p>
+                    <p className={styles.MenuName}>Моя карта</p>
                 </Link>
             </li>
             <li className={styles.MenuListItem}>
                 <Link to={'/map'} className={styles.MunuListItemLink}>
                     <img src="./assets/icons/location.png"/>
-                    <p>Карта партнеров</p>
+                    <p className={styles.MenuName}>Карта партнеров</p>
                 </Link>
             </li>
             <li className={styles.MenuListItem}>
                 <a className={styles.MunuListItemLink} href="#">
                     <img src="./assets/icons/promotions.png"/>
-                    <p>Акции</p>
+                    <p className={styles.MenuName}>Акции</p>
                 </a>
             </li>
             <li className={styles.MenuListItem}>
                 <a className={styles.MunuListItemLink} href="#">
                     <img src="./assets/icons/profile.png"/>
-                    <p>Мой профиль</p>
+                    <p className={styles.MenuName}>Мой профиль</p>
                 </a>
             </li>
           </ul>

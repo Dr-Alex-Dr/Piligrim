@@ -15,8 +15,28 @@ export interface ICoin {
   }
 
 export interface IBonus {
-    id?: string,
-    image?: string,
-    name?: string,
-    balance_nano?: number
+    id: string,
+    image: string,
+    name: string,
+    balance_nano: number
   }
+
+export const exampleCoin: ICoin = {
+  address: "",
+  balance_nano: 0,
+  balance_ok: true,
+  created_at: "",
+  description: "",
+  id: "",
+  image: "",
+  is_oem: false,
+  is_self_writing: true,
+  name: "",
+  price_oem_nano: 0,
+  symbol: "",
+  updated_at: "",
+};
+
+export interface ICoinProps {
+  coins: ICoin[] 
+}

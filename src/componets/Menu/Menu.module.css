@@ -35,3 +35,8 @@
     color: #6AB2F2;
     font-family: Roboto;
 }
+
+.MenuName {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}

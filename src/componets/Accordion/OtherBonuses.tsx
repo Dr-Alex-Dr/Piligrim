@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, Dispatch, SetStateAction} from 'react';
 import Bonus from '../Bonus/Bonus';
 import styles from './OtherBonuses.module.css'
 import classNames from 'classnames';
@@ -7,10 +7,19 @@ import { IBonus } from '../../Interfaces';
 import { ICoin } from '../../Interfaces';
 
 interface OtherBonusesProps {
-  bonusList: ICoin[];
+  bonusList: ICoin[],
+  otherBonuses: ICoin[],
+  currentBonus: ICoin,
+  setCurrentBonus: Dispatch<SetStateAction<ICoin>>,
 }
 
-const OtherBonuses = ({bonusList}: OtherBonusesProps) => {
+const OtherBonuses = (props: OtherBonusesProps) => {
+  const {
+    bonusList,
+    otherBonuses,
+    currentBonus,
+    setCurrentBonus
+  } = props
   const [visibility, setVisibility] = useState(false)
 
   return (
@@ -31,7 +40,16 @@ const OtherBonuses = ({bonusList}: OtherBonusesProps) => {
       </div> 
       {
         visibility && bonusList.map((item, index) => ( 
-          <Bonus key={index} id={item.id} image={item.image} name={item.name} balance_nano={item.balance_nano}/>
+          <Bonus 
+            key={index} 
+            id={item.id} 
+            image={item.image} 
+            name={item.name} 
+            balance_nano={item.balance_nano}
+            otherBonuses={otherBonuses}
+            currentBonus={currentBonus}
+            setCurrentBonus={setCurrentBonus} 
+            />
         ))
       }
     </div>

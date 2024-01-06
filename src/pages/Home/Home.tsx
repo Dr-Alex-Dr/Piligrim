@@ -1,43 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import { MainButton, useShowPopup } from '@vkruglikov/react-telegram-web-app';
 import Bonus from '../../componets/Bonus/Bonus';
 import OtherBonuses from '../../componets/Accordion/OtherBonuses';
 import Commands from '../../componets/Commands/Commands';
 import Menu from '../../componets/Menu/Menu';
 import Transactions from '../../componets/Transactions/Transactions';
+import GetUserData from '../../api/GetUserData';
 import axios from 'axios';
 import styles from './Home.module.css'
 import { ICoin } from '../../Interfaces';
-import { IBonus } from '../../Interfaces';
+import { exampleCoin } from '../../Interfaces';
+import { useLocation } from "react-router-dom";
 
-interface ICoinProps {
-    coins: ICoin[] 
-}
 
-const exampleCoin: ICoin = {
-    address: "",
-    balance_nano: 0,
-    balance_ok: true,
-    created_at: "",
-    description: "",
-    id: "",
-    image: "",
-    is_oem: false,
-    is_self_writing: true,
-    name: "",
-    price_oem_nano: 0,
-    symbol: "",
-    updated_at: "",
-  };
+const Home = () => {
+    const { state } = useLocation();
+    // console.log(state)
 
-const Home = ({coins}: ICoinProps) => {
+    const [coins, setCoins] = useState<ICoin[]>([])
     const [otherBonuses, setOtherBonuses] = useState<ICoin[]>([])
     const [currentBonus, setCurrentBonus] = useState<ICoin>(exampleCoin)
 
-    useEffect(() => {     
-        setOtherBonuses([...coins.slice(1)])
-        setCurrentBonus(coins[0])
+    const fetchData = async () => {
+        const getUserDataResponse = await GetUserData(968615914);
+        const userData = getUserDataResponse.data;
+        setCurrentBonus(userData.data.coins[0])
+        setCoins([...userData.data.coins]);
+    }
+
+    useEffect(() => {
+        let deleteCurrentBonus = coins.filter(item => item.id !== currentBonus.id)
+        setOtherBonuses([...deleteCurrentBonus])
+    }, [currentBonus])
+
+    useEffect(() => {
+        fetchData()
     }, [])
+
+    useEffect(() => {
+        console.log('Платеж отправлен 1')
+        fetchData()
+    }, [state])
 
     const visualizesCoins = () => {
         const renderBonus = (coin: ICoin) => (
@@ -47,16 +49,24 @@ const Home = ({coins}: ICoinProps) => {
                 image={coin.image}
                 name={coin.name}
                 balance_nano={coin.balance_nano}
+                otherBonuses={otherBonuses}
+                currentBonus={currentBonus}
+                setCurrentBonus={setCurrentBonus}
             />
         );
         
-        if (otherBonuses.length > 0) {
-            console.log(otherBonuses)
+        if (otherBonuses.length > 0) {      
             return (
                 <>
                     {renderBonus(currentBonus)}
                     {otherBonuses.length === 1 && otherBonuses.map(renderBonus)}
-                    {otherBonuses.length > 1 && <OtherBonuses bonusList={otherBonuses} />}
+                    {otherBonuses.length > 1 && 
+                    <OtherBonuses 
+                        bonusList={otherBonuses}
+                        otherBonuses={otherBonuses}
+                        currentBonus={currentBonus}
+                        setCurrentBonus={setCurrentBonus} 
+                    />}
                 </>
             );
         }
@@ -65,13 +75,12 @@ const Home = ({coins}: ICoinProps) => {
 
     return (
         <div className={styles.container}>
-            <img className={styles.image} src='backpiligrim.jpg'/>
-            <Commands />
-            {
-                visualizesCoins()
-            }
-            
-            
+        <div className={styles.imageContainer}>
+            {currentBonus.id && <img className={styles.image} src={require(`../../assets/${currentBonus.id}.jpg`)}/>}
+        </div>
+        <Commands coins={coins}/>
+        {visualizesCoins()} 
+                      
         <Transactions HistoryList={[
           { date: '2023-01-01', quantity: '10', type: 'RECEIVED' },
           { date: '2023-01-02', quantity: '15', type: 'RECEIVED' },

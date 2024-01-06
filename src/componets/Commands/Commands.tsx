@@ -5,51 +5,53 @@ import { HiArrowDownCircle } from "react-icons/hi2";
 import { BsCreditCard2BackFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { MainButton, useShowPopup } from '@vkruglikov/react-telegram-web-app';
+import { Link } from 'react-router-dom';
+import { ICoinProps } from '../../Interfaces';
 
-
-const Commands = () => {
-  const showPopup = useShowPopup();
-  
-  const handleClick = () =>
-    showPopup({
-      message: 'popup',
-    });
-
+const Commands = ({coins}: ICoinProps) => {
   return (
     <div className={styles.AppCommands}>
       <ul className={styles.AppCommandsList}>
-        <li className={styles.AppCommandsListItem} onClick={handleClick}>
-          <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
-            <div>
-              <HiArrowUpCircle />
-            </div>
-          </IconContext.Provider>
-          <p className={styles.CommandText}>Отправить</p>
-        </li>
-        <li className={styles.AppCommandsListItem} onClick={handleClick}>
-          <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
-            <div>
-              <HiArrowDownCircle />
-            </div>
-          </IconContext.Provider>
-          <p className={styles.CommandText}>Получить</p>
-        </li>
-        <li className={styles.AppCommandsListItem} onClick={handleClick}>
-          <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
-            <div>
-              <HiArrowUpCircle />
-            </div>
-          </IconContext.Provider>
-          <p className={styles.CommandText}>Обменять</p>
-        </li>
-        <li className={styles.AppCommandsListItem} onClick={handleClick}>
-          <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
-            <div>
-              <BsCreditCard2BackFill />
-            </div>
-          </IconContext.Provider>
-          <p className={styles.CommandText}>Списать</p>
-        </li>
+        <Link to={'/send'} state={coins} className={styles.AppCommandsLink}>
+          <li className={styles.AppCommandsListItem}>
+            <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
+              <div>
+                <HiArrowUpCircle />
+              </div>
+            </IconContext.Provider>
+            <p className={styles.CommandText}>Отправить</p>
+          </li>
+        </Link>
+        <Link to={'/get'} className={styles.AppCommandsLink}>
+          <li className={styles.AppCommandsListItem}>
+            <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
+              <div>
+                <HiArrowDownCircle />
+              </div>
+            </IconContext.Provider>
+            <p className={styles.CommandText}>Получить</p>
+          </li>
+        </Link>
+        <Link to={'/exchange'} className={styles.AppCommandsLink}>
+          <li className={styles.AppCommandsListItem}>
+            <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
+              <div>
+                <HiArrowUpCircle />
+              </div>
+            </IconContext.Provider>
+            <p className={styles.CommandText}>Обменять</p>
+          </li>
+        </Link>
+        <Link to={'/writeoff'} className={styles.AppCommandsLink}>
+          <li className={styles.AppCommandsListItem}>
+            <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
+              <div>
+                <BsCreditCard2BackFill />
+              </div>
+            </IconContext.Provider>
+            <p className={styles.CommandText}>Списать</p>
+          </li>
+        </Link>
       </ul>
     </div>
   )

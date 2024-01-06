@@ -1,5 +1,6 @@
 const tg = window.Telegram.WebApp
 
+
 const useTelegram = () => {
     const ready = () => {
         tg.ready()
