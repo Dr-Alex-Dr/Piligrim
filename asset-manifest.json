@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Piligrim/static/css/main.0a581e6f.css",
-    "main.js": "/Piligrim/static/js/main.63602126.js",
+    "main.css": "/Piligrim/static/css/main.c4c4efdd.css",
+    "main.js": "/Piligrim/static/js/main.84bf6c3c.js",
     "static/media/07ac8916-2fd7-4e15-a80c-14c0dcfc247c.jpg": "/Piligrim/static/media/07ac8916-2fd7-4e15-a80c-14c0dcfc247c.00c8823be2e1e3cd1536.jpg",
     "static/media/9d706c9c-3954-439e-af59-a2bec8946fc2.jpg": "/Piligrim/static/media/9d706c9c-3954-439e-af59-a2bec8946fc2.00c8823be2e1e3cd1536.jpg",
     "index.html": "/Piligrim/index.html",
-    "main.0a581e6f.css.map": "/Piligrim/static/css/main.0a581e6f.css.map",
-    "main.63602126.js.map": "/Piligrim/static/js/main.63602126.js.map"
+    "main.c4c4efdd.css.map": "/Piligrim/static/css/main.c4c4efdd.css.map",
+    "main.84bf6c3c.js.map": "/Piligrim/static/js/main.84bf6c3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a581e6f.css",
-    "static/js/main.63602126.js"
+    "static/css/main.c4c4efdd.css",
+    "static/js/main.84bf6c3c.js"
   ]
 }
