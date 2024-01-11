@@ -40,3 +40,32 @@ export const exampleCoin: ICoin = {
 export interface ICoinProps {
   coins: ICoin[] 
 }
+
+export interface History {
+  date: string;
+  quantity: string;
+  type: string;
+}
+  
+export interface HistoryProps {
+  HistoryList: History[];
+}
+
+export interface ITransaction {
+  type: string;
+  success: boolean;
+  amount_nano: number;
+  from: string;
+  from_wallet_data: IWalletData;
+  to: string;
+  to_wallet_data: IWalletData;
+  comment: string;
+  lt: number;
+  time: string;
+  tx: string;
+}
+
+export interface IWalletData {
+  wallet_type: string;
+  id: string;
+}

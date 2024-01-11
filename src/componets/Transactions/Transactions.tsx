@@ -1,17 +1,12 @@
 import React from 'react';
 import styles from './Transactions.module.css'
+import { ITransaction } from '../../Interfaces';
 
-interface History {
-  date: string;
-  quantity: string;
-  type: string;
-}
-  
-interface HistoryProps {
-  HistoryList: History[];
+interface ITransactionProps {
+  transactions: ITransaction[] 
 }
 
-const Transactions = ({HistoryList}: HistoryProps) => {
+const Transactions = ({transactions}: ITransactionProps) => {
   return (
     <div className={styles.TransactionsContainer}>
       <p>Список транзакций </p>
@@ -24,10 +19,10 @@ const Transactions = ({HistoryList}: HistoryProps) => {
           </tr>
         </thead>
         <tbody>
-          {HistoryList.map((item, index) => (
+          {transactions.map((item, index) => (
             <tr key={index}>
-              <td>{item.date}</td>
-              <td>{item.quantity}</td>
+              <td>{item.time.replace("T", " ").replace("Z", "")}</td>
+              <td>{item.amount_nano / 1000000000}</td>
               <td>{item.type}</td>
             </tr>
           ))}

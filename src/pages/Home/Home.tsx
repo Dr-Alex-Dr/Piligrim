@@ -4,42 +4,58 @@ import OtherBonuses from '../../componets/Accordion/OtherBonuses';
 import Commands from '../../componets/Commands/Commands';
 import Menu from '../../componets/Menu/Menu';
 import Transactions from '../../componets/Transactions/Transactions';
+import GetTransactions from '../../api/GetTransactions';
 import GetUserData from '../../api/GetUserData';
-import axios from 'axios';
 import styles from './Home.module.css'
 import { ICoin } from '../../Interfaces';
+import { ITransaction } from '../../Interfaces';
 import { exampleCoin } from '../../Interfaces';
-import { useLocation } from "react-router-dom";
-
 
 const Home = () => {
-    const { state } = useLocation();
-    // console.log(state)
-
     const [coins, setCoins] = useState<ICoin[]>([])
     const [otherBonuses, setOtherBonuses] = useState<ICoin[]>([])
     const [currentBonus, setCurrentBonus] = useState<ICoin>(exampleCoin)
+    const [transactions, setTransactions] = useState<ITransaction[]>([])
 
-    const fetchData = async () => {
-        const getUserDataResponse = await GetUserData(968615914);
-        const userData = getUserDataResponse.data;
-        setCurrentBonus(userData.data.coins[0])
-        setCoins([...userData.data.coins]);
+    const getDataCoins = async () => {
+        try {
+            const getUserDataResponse = await GetUserData(968615914)
+            return getUserDataResponse.data
+        }
+        catch(err) {
+            console.error(err);
+        }
     }
 
-    useEffect(() => {
-        let deleteCurrentBonus = coins.filter(item => item.id !== currentBonus.id)
-        setOtherBonuses([...deleteCurrentBonus])
+    const getDataTransactions = async (coin_Id: string) => {
+        try {
+            const getResponseTransactions = await GetTransactions(968615914, coin_Id)
+            const transactionData = getResponseTransactions.data
+            setTransactions(transactionData.data)
+        }
+        catch(err) {
+            console.error(err);
+        }
+    }
+
+    useEffect(() => {   
+        if (coins.length !== 0) {
+            let deleteCurrentBonus = coins.filter(item => item.id !== currentBonus.id)
+            setOtherBonuses([...deleteCurrentBonus])
+            getDataTransactions(currentBonus.id)
+        }      
     }, [currentBonus])
 
     useEffect(() => {
-        fetchData()
+        getDataCoins()
+            .then(res => res.data)
+            .then(res => {
+                setCurrentBonus(res.coins[0])
+                getDataTransactions(res.coins[0].id)
+                setCoins([...res.coins]);
+            })     
     }, [])
 
-    useEffect(() => {
-        console.log('Платеж отправлен 1')
-        fetchData()
-    }, [state])
 
     const visualizesCoins = () => {
         const renderBonus = (coin: ICoin) => (
@@ -80,12 +96,7 @@ const Home = () => {
         </div>
         <Commands coins={coins}/>
         {visualizesCoins()} 
-                      
-        <Transactions HistoryList={[
-          { date: '2023-01-01', quantity: '10', type: 'RECEIVED' },
-          { date: '2023-01-02', quantity: '15', type: 'RECEIVED' },
-          { date: '2023-01-03', quantity: '20', type: 'RECEIVED' },
-        ]}/>
+        <Transactions transactions={transactions}/> 
         <Menu />
       </div>
   );
