@@ -92,7 +92,13 @@ const Home = () => {
     return (
         <div className={styles.container}>
         <div className={styles.imageContainer}>
-            {currentBonus.id && <img className={styles.image} src={require(`../../assets/${currentBonus.id}.jpg`)}/>}
+        {currentBonus.id && (
+        <img
+          className={styles.image}
+          src={require(`../../assets/${currentBonus.id}.jpg`)}
+          alt="Bonus Image"
+        />
+      )}
         </div>
         <Commands coins={coins}/>
         {visualizesCoins()} 

@@ -4,7 +4,6 @@ import { HiArrowUpCircle } from "react-icons/hi2";
 import { HiArrowDownCircle } from "react-icons/hi2";
 import { BsCreditCard2BackFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
-import { MainButton, useShowPopup } from '@vkruglikov/react-telegram-web-app';
 import { Link } from 'react-router-dom';
 import { ICoinProps } from '../../Interfaces';
 
@@ -22,7 +21,7 @@ const Commands = ({coins}: ICoinProps) => {
             <p className={styles.CommandText}>Отправить</p>
           </li>
         </Link>
-        <Link to={'/get'} className={styles.AppCommandsLink}>
+        <Link to={'/get'} state={coins} className={styles.AppCommandsLink}>
           <li className={styles.AppCommandsListItem}>
             <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
               <div>
@@ -32,7 +31,7 @@ const Commands = ({coins}: ICoinProps) => {
             <p className={styles.CommandText}>Получить</p>
           </li>
         </Link>
-        <Link to={'/exchange'} className={styles.AppCommandsLink}>
+        <Link to={'/exchange'} state={coins} className={styles.AppCommandsLink}>
           <li className={styles.AppCommandsListItem}>
             <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
               <div>
@@ -42,7 +41,7 @@ const Commands = ({coins}: ICoinProps) => {
             <p className={styles.CommandText}>Обменять</p>
           </li>
         </Link>
-        <Link to={'/writeoff'} className={styles.AppCommandsLink}>
+        <Link to={'/writeoff'} state={coins} className={styles.AppCommandsLink}>
           <li className={styles.AppCommandsListItem}>
             <IconContext.Provider value={{ color: "#6AB2F2", size: '27' }}>
               <div>

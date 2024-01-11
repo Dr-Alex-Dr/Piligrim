@@ -1,13 +1,15 @@
 import React from 'react'
+import Menu from '../../componets/Menu/Menu';
 import styles from './Map.module.css'
 
 
 const Map = () => {
     return (
-        <>
-            <h1>Карта партнеров</h1>
-            {/* <iframe id="map" src="https://oemedia.ru/map/sbrf/" ></iframe> */}
-        </>
+        <div className={styles.container}>
+            <p className={styles.title}>Карта партнеров</p>
+            {<iframe className={styles.map} src="https://oemedia.ru/map/sbrf/" ></iframe>}
+            <Menu />
+        </div>
     )
 }
 

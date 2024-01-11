@@ -9,7 +9,6 @@ import { ICoin } from '../../Interfaces';
 
 const SendPage = () => {
     const { state }: Location<ICoin[]> = useLocation();
-    console.log('senpage state ' + JSON.stringify(state[0]))
     const {user} = useTelegram();
     let navigate = useNavigate();
 
